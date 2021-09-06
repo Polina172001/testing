@@ -1,0 +1,67 @@
+body {
+    color: #333;
+}
+
+.input {
+    display: inline-block;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+}
+
+.card {
+  width: 80px;
+  height: 50px;
+  border: 1px solid black;
+  display: inline-block;
+}
+
+.item {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.card-visa {
+  background: url(../src/visa_curved.png) no-repeat;
+  background-size: contain;
+}
+
+.card-mastercard {
+  background: url(../src/mastercard_curved.png) no-repeat;
+  background-size: cover;
+}
+
+.card-jcb {
+  background: url(../src/jcb.png) no-repeat;
+  background-size: cover;
+}
+
+.card-discover {
+  background: url(../src/card_discover.png) no-repeat;
+  background-size: contain;
+}
+
+.card-dinersclub {
+  background: url(../src/credit_card_gold_diners_club.png) no-repeat;
+  background-size: contain;
+}
+
+.card-americanexpress {
+  background: url(../src/american_express_curved.png) no-repeat;
+  background-size: contain;
+}
+
+.card-mir {
+  background: url(../src/credit_card_green.png) no-repeat;
+  background-size: contain;
+}
+
+.button {
+  width: 200px;
+  height: 30px;
+}
