@@ -1,5 +1,10 @@
+/* eslint-disable linebreak-style */
+/* eslint-disable array-bracket-spacing */
+/* eslint-disable comma-dangle */
+/* eslint-disable comma-spacing */
+/* eslint-disable indent */
+/* eslint-disable linebreak-style */
 const path = require('path');
-const webpack = require('webpack');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
@@ -16,8 +21,7 @@ module.exports = {
     compress: true,
   },
   module: {
-    rules: [
-      {
+    rules: [{
         test: /\.js$/,
         exclude: /node_modules/,
         use: {
@@ -26,17 +30,25 @@ module.exports = {
       },
       {
         test: /\.html$/,
-        use: [
-          {
-            loader: 'html-loader',
-          },
-        ],
+        use: [{
+          loader: 'html-loader',
+        }, ],
       },
       {
         test: /\.css$/,
         use: [
           MiniCssExtractPlugin.loader, 'css-loader',
         ],
+      },
+      {
+        test: /\.(png|jpe?g|gif)$/i,
+        use: [{
+          loader: 'url-loader',
+          options: {
+            limit: 8192,
+          },
+          // eslint-disable-next-line array-bracket-spacing
+        }],
       },
     ],
   },
@@ -49,7 +61,5 @@ module.exports = {
       filename: '[name].css',
       chunkFilename: '[id].css',
     }),
-    new webpack.HotModuleReplacementPlugin(),
   ],
 };
-
