@@ -27,25 +27,25 @@ export default function show() {
 
   const check = checkNumber(input);
   if (check === 'Visa') {
-    document.querySelector('.card-visa').querySelector('.card').style.display = 'none';
+    document.querySelector('.card-visa').querySelector('.item').style.display = 'none';
   }
   if (check === 'MasteCard') {
-    document.querySelector('.card-mastercard').querySelector('.card').style.display = 'none';
+    document.querySelector('.card-mastercard').querySelector('.item').style.display = 'none';
   }
   if (check === 'JCB') {
-    document.querySelector('.card-jcb').querySelector('.card').style.display = 'none';
+    document.querySelector('.card-jcb').querySelector('.item').style.display = 'none';
   }
   if (check === 'Discover') {
-    document.querySelector('.card-discover').querySelector('.card').style.display = 'none';
+    document.querySelector('.card-discover').querySelector('.item').style.display = 'none';
   }
   if (check === 'Diners Club International') {
-    document.querySelector('.card-dinersclub').querySelector('.card').style.display = 'none';
+    document.querySelector('.card-dinersclub').querySelector('.item').style.display = 'none';
   }
   if (check === 'American Express') {
-    document.querySelector('.card-americanexpress').querySelector('.card').style.display = 'none';
+    document.querySelector('.card-americanexpress').querySelector('.item').style.display = 'none';
   }
   if (check === 'Mir') {
-    document.querySelector('.card-mir').querySelector('.card').style.display = 'none';
+    document.querySelector('.card-mir').querySelector('.item').style.display = 'none';
   }
 
 }
