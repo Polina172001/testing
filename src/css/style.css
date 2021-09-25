@@ -1,5 +1,5 @@
-body {
-    color: #333;
+* {
+  box-sizing: border-box;
 }
 
 .input {
@@ -24,6 +24,7 @@ body {
   position: relative;
   width: 100%;
   height: 100%;
+  opacity: 0.5;
 }
 
 .card-visa {
@@ -61,7 +62,18 @@ body {
   background-size: contain;
 }
 
-.button {
+.card-input,
+.card-submit {
   width: 200px;
   height: 30px;
+}
+
+.card-submit {
+  background-color: brown;
+  color: white;
+}
+
+.error-message {
+  margin-top: 10px;
+  color: black;
 }

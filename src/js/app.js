@@ -5,6 +5,7 @@
 /* eslint-disable no-use-before-define */
 /* eslint-disable linebreak-style */
 import checkNumber from "./checkNumber";
+import cardValidate from "./cardValidate";
 
 document.querySelector('form').addEventListener('submit', (e) => {
   e.preventDefault();
@@ -18,6 +19,11 @@ export default function show() {
     e.style.display = 'block';
   });
   const input = document.querySelector('.input').value;
+  if (!cardValidate(input)) {
+    document.querySelector('.input').value = '';
+    showErrorMsg();
+    return;
+  }
 
   const check = checkNumber(input);
   if (check === 'Visa') {
@@ -41,5 +47,14 @@ export default function show() {
   if (check === 'Mir') {
     document.querySelector('.card-mir').querySelector('.card').style.display = 'none';
   }
+
+}
+
+function showErrorMsg() {
+  document.querySelector('.container').insertAdjacentHTML('beforeend', '<div class=\'error-message\'>Введен несуществующий номер карты</div>');
+
+  setTimeout(() => {
+    document.querySelector('.error-message').remove();
+  }, 2000);
 
 }

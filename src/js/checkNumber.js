@@ -6,7 +6,7 @@
 export default function checkNumber(n) {
 
   const card = `${n}`;
-  const sixCount = +card.substr(0, 6);
+  const sixCount = +card.substring(0, 6);
   const fourCount = +card.substring(0, 4);
 
   if (card.startsWith('4') && card.length >= 13 && card.length <= 19) {
