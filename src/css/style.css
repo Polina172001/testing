@@ -20,7 +20,7 @@
 }
 
 .item {
-  background-color: blue;
+  background-color: green;
   display: block;
   position: relative;
   width: 100%;
@@ -40,7 +40,7 @@
 
 .card-jcb {
   background: url(../src/jcb.png) no-repeat;
-  background-size: cover;
+  background-size: contain;
 }
 
 .card-discover {
