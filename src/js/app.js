@@ -18,9 +18,9 @@ export default function show() {
   Array.from(document.querySelectorAll('.item')).forEach((e) => {
     e.style.display = 'block';
   });
-  const input = document.querySelector('.input').value;
+  const input = document.querySelector('.card-input').value;
   if (!cardValidate(input)) {
-    document.querySelector('.input').value = '';
+    document.querySelector('.card-input').value = '';
     showErrorMsg();
     return;
   }
