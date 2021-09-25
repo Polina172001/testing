@@ -20,6 +20,7 @@
 }
 
 .item {
+  background-color: blue;
   display: block;
   position: relative;
   width: 100%;
